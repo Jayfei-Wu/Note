@@ -134,11 +134,103 @@
 
 ## 3.Linux目录结构
 
+linux的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的目录。
 
+linux里面，一切皆文件
+
+### 具体的结构目录
+
+/bin （/usr/sbin、/usr/local/bin）
+
+是Binary的缩写，这个目录存放着最经常使用的命令
+
+/sbin （/usr/sbin、/usr/local/sbin）
+
+s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。
+
+/home
+
+存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名。
+
+/root
+
+该目录为系统管理员，也称作超级权限者的用户主目录
+
+/lib
+
+系统开机所需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需用到这些共享库
+
+/lost + found 
+
+这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。
 
 # 二、实际操作篇
 
-远程登陆（XShell，XFtp）
+## 1.远程登陆--XShell
+
+**双击打开软件**
+
+![image-20220607103342035](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607103342035.png)
+
+**点击新建**-名称自定义-主机输入IP
+
+虚拟机端ifconfig获取linux公网地址
+
+主机端ping该地址测试是否连通
+
+![image-20220607103702473](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607103702473.png)
+
+**双击左侧该会话-接受并保存**
+
+![image-20220607104223088](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607104223088.png)
+
+![image-20220607104304240](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607104304240.png)
+
+![image-20220607104632200](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607104632200.png)
+
+## 2.远程上传或下载--XFtp
+
+基于windows平台的SFTP、FTP文件传输软件。windows用户能安全的在UNIX/Linux和windowsPC之间传输文件
+
+**双击打开软件**
+
+![image-20220607105131159](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607105131159.png)
+
+**点击新建**
+
+![image-20220607105320190](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607105320190.png)
+
+![image-20220607105340283](C:/Users/10483/AppData/Roaming/Typora/typora-user-images/image-20220607105340283.png)
+
+**点击连接-出现bug-乱码。。。**
+
+![image-20220607105549167](C:/Users/10483/AppData/Roaming/Typora/typora-user-images/image-20220607105549167.png)
+
+**解决bug**
+
+![image-20220607110222061](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607110222061.png)
+
+![image-20220607110426899](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607110426899.png)
+
+**搞定**
+
+![image-20220607110529814](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607110529814.png)
+
+**右键点击传输**
+
+![image-20220607105833602](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607105833602.png)
+
+
+
+## 3.Vi和Vim编辑器
+
+
+
+
+
+
+
+
 
 实用指令
 
@@ -146,7 +238,7 @@
 
 用户管理
 
-Vi和Vim编辑器
+
 
 定时任务调度
 
@@ -174,4 +266,3 @@ Linux入侵检测&权限划分&系统优化
 
 Linux面试题
 
-# 
