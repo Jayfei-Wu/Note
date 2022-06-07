@@ -230,9 +230,61 @@ Linux系统会内置Vi文本编辑器
 
 Vim具有程序编辑的能力，可以看做是Vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计，代码补全，编译及错误跳转等方便编程的功能特别丰富，在开发者中被广泛使用。
 
+**三种模式**
+
+**正常模式**
+
+以Vim打开一个档案就直接进入一般模式了（这是默认的模式）。在这个模式中，可以使用（上下左右）按键来移动光标，使用（删除字符）或（删除整行）来处理档案内容，也可以使用（复制、粘贴）来处理文件数据
+
+**插入模式**
+
+按下 i，o，a，r等任何一个字母会进入编辑模式
+
+**命令行模式**
+
+按下esc退出，再输入：，在这个模式中，可以提供相关指令，完成读取，存盘，替换，离开vim，显示行号等动作
+
+实例：使用vim开发一个hello.java程序
+
+![image-20220607125217336](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607125217336.png)
+
+![image-20220607125240473](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607125240473.png)
+
+![image-20220607125535935](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607125535935.png)
+
+按下esc，再输入：，进入命令行模式
+
+wq：写入并退出
+
+![image-20220607125927818](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607125927818.png)
+
+![image-20220607130002280](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607130002280.png)
 
 
 
+## 4.Vi和Vim快捷键
+
+![image-20220607131022517](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607131022517.png)
+
+一般模式下：
+
+1.拷贝当前行 yy，拷贝当前行向下的5行 5yy，并粘贴（p）
+
+2.删除当前行 dd，删除当前行向下的5行 5dd
+
+3.在文件中查找某个单词【命令行下/关键字，回车 查找，输入n就是查找下一个】
+
+4.设置文件的行号，取消文件的行号。【命令行下：set nu 和 ：setnonu】
+
+5.编辑 /etc/profile文件，在一般模式下使用快捷键到该文档的最末行【G】和最首行【gg】
+
+6.在一个文件中输入“Hello”，然后又撤销这个动作 u
+
+7.编辑 /etc/profile文件，并将光标移动到 20行 shift + g
+
+
+
+![image-20220607132532878](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607132532878.png)
 
 
 
