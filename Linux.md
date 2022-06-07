@@ -200,11 +200,11 @@ s就是Super User的意思，这里存放的是系统管理员使用的系统管
 
 ![image-20220607105320190](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607105320190.png)
 
-![image-20220607105340283](C:/Users/10483/AppData/Roaming/Typora/typora-user-images/image-20220607105340283.png)
+![image-20220607113620001](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607113620001.png)
 
 **点击连接-出现bug-乱码。。。**
 
-![image-20220607105549167](C:/Users/10483/AppData/Roaming/Typora/typora-user-images/image-20220607105549167.png)
+![image-20220607113652986](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220607113652986.png)
 
 **解决bug**
 
@@ -223,6 +223,12 @@ s就是Super User的意思，这里存放的是系统管理员使用的系统管
 
 
 ## 3.Vi和Vim编辑器
+
+**基本介绍**
+
+Linux系统会内置Vi文本编辑器
+
+Vim具有程序编辑的能力，可以看做是Vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计，代码补全，编译及错误跳转等方便编程的功能特别丰富，在开发者中被广泛使用。
 
 
 
