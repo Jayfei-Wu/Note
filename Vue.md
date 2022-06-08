@@ -177,19 +177,179 @@
 </html>
 ```
 
+## 1.5 数据绑定
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据绑定</title>
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        Vue中有2种数据绑定的方式
+            1.单向绑定（v-bind），数据只能从data流向页面。
+            2.双向绑定（v-model），数据不仅能从data流向页面，还可以从页面流向data。
+                备注：
+                    1.双向绑定一般都应用在表单类元素上（如：input、select等）
+                    2.v-model:value 可以简写为 v-model ,因为v-model默认收集的就是value值              
+     -->
+    <!-- 准备好一个容器 -->
+    <div id="root">
+        <!-- 普通写法 -->
+        单向数据绑定： <input type="text" v-bind:value="name"><br/>
+        双向数据绑定： <input type="text" v-model:value="name"><br/>
+
+        <!-- 简单写法 -->
+        单向数据绑定： <input type="text" :value="name"><br/>
+        双向数据绑定： <input type="text" v-model="name"><br/>
 
 
+        <!-- 如下代码是错误的，因为v-model只能应用在表单类元素（输入类元素） -->
+        <h2 v-model:x="name">Hello</h2>
+    </div>
+</body>
 
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止Vue在启动时生成生产提示
 
+    new Vue({
+        el:'#root',
+        data:{
+            name:'张三'
+        }
+    })
+</script>
 
+</html>
+```
 
+## 1.6 el与data的两种写法
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el与data的两种写法</title>
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        data与el的2种写法
+            1.el有2种写法
+                (1).new Vue时候配置el属性
+                (2).先创建Vue实例，稍后再通过vm.$mount('#root')指定el的值
+            2.data有2种写法
+                (1).对象式
+                (2).函数式
+                如何选择，目前哪种写法都可以，以后学习到组件时，data必须使用函数式，否则会报错
+            3.一个重要的原则
+                由Vue管理的函数，一定不要写箭头函数，一旦写了箭头函数，this就不再是Vue实例了
+    -->
 
+    <!-- 准备好一个容器 -->
+    <div id="root">
+        <h1>Hello,{{name}}</h1>
+    </div>
+</body>
 
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 Vue 在启动时生成生产提示
+    //el的两种写法
+    // const v = new Vue({
+    //     // el:'#root',第一种写法
+    //     data:{
+    //         name:'world'
+    //     }
+    // })
+    // console.log(v)
 
+    // setTimeout(() => {   $mount更加灵活
+    //      v.$mount('#root') //第二种写法
+    // },1000);
 
+    //data的两种写法
+    new Vue({
+        el:'#root',
+        //data的第一种写法，对象式
+        // data:{
+        //     name:'World'
+        // }
 
+        //data的第二种写法，函数式
+        data:function(){    //可以直接写成data()
+            console.log('@@@',this) //此处的this是Vue实例对象
+            return{
+                name:'World'
+            }
+        }
+    })
+</script>
 
+</html>
+```
+
+## 1.7 MVVM模型
+
+​		1.M 模型(Model)：对应data中的数据
+
+​		2.V 视图(View)：模板代码
+
+​		3.VM 视图模型(ViewModel)：Vue实例对象
+
+![image-20220608103018057](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220608103018057.png)
+
+​			观察发现：
+
+​			1.data中所有的属性，最后都出现在了vm身上
+
+​			2.vm身上所有的属性，及Vue原型上所有属性，在vue模板中都可以直接使用
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理解MVVM</title>
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 准备好一个容器 -->
+    <!-- 这个div是 视图 View  -->
+    <div id="root">
+        <h1>学校名称：{{name}}</h1>
+        <h1>学校地址：{{address}}</h1>
+    </div>
+</body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false //阻止 Vue 在启动时生成生产提示
+    
+     new Vue({      //new Vue就是ViewModel
+         el:'#root',
+         data:{
+            name:'world',   //data里面是model
+            address:'北京'
+         }
+     })
+</script>
+
+</html>
+```
+
+## 1.8 数据代理
 
 
 
