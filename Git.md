@@ -194,7 +194,158 @@ p .md-image:only-child{
 
 # 第6章 IDEA集成Git
 
+## 6.1配置Git忽略文件
+
+​		为什么要忽略他们？
+
+​		与项目的实际功能无关，不参与服务器上部署运行。把他们忽略掉能够屏蔽IDE工具间的差异
+
+​		怎么忽略？
+
+​		1） 创建忽略规则文件 git.ignore
+
+​		这个文件的存放位置原则上在哪都可以，为了便于让 ~/.gitconfig文件引用，建议也放在用户目录下。
+
+![image-20220605231106669](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605231106669.png)
+
+```
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java(J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.classpath
+.project
+.settings
+target
+.idea
+*.iml
+```
+
+![image-20220605231907193](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605231907193.png)
+
+
+
+## 6.2定位Git程序
+
+![image-20220605232438939](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605232438939.png)
+
+
+
+## 6.3 初始化本地库
+
+![image-20220605232835388](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605232835388.png)
+
+![image-20220605232936342](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605232936342.png)
+
+
+
+## 6.4 添加到暂存区
+
+![image-20220605233131153](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605233131153.png)
+
+
+
+## 6.5 提交到本地库
+
+![image-20220605233805068](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605233805068.png)
+
+![image-20220605234029390](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605234029390.png)
+
+![image-20220605234127672](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220605234127672.png)
+
+
+
+## 6.6 切换版本
+
+![image-20220609164746469](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609164746469.png)
+
+## 6.7 创建分支
+
+​		1.
+
+![image-20220609170431847](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609170431847.png)
+
+​		2.
+
+![image-20220609170530665](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609170530665.png)
+
+​		3.
+
+![image-20220609170617473](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609170617473.png)
+
+## 6.8 合并分支
+
+![image-20220609221606033](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609221606033.png)
+
+在主分支上，选择其他分支，点击上图选项。
+
+## 6.9 解决冲突
+
+![image-20220609222259438](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609222259438.png)
+
+**点击右侧Merge**
+
+![image-20220609222345311](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609222345311.png)
+
+![image-20220609222543460](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609222543460.png)
+
+![image-20220609222621244](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609222621244.png)
+
+
+
 # 第7章 IDEA集成GitHub
+
+## 7.1 设置GitHub账号
+
+**使用Token口令**
+
+## 7.2 分享工程到GitHub
+
+![image-20220609224848650](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609224848650.png)
+
+![image-20220609225119814](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609225119814.png)
+
+![image-20220609225141561](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609225141561.png)
+
+## 7.3 push推送本地库到远程库
+
+提交本地库
+
+![image-20220609230836945](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609230836945.png)
+
+push推送
+
+![image-20220609231022298](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609231022298.png)
+
+## 7.4 pull拉取远程库到本地库
+
+![image-20220609232054793](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609232054793.png)
+
+## 7.5 clone克隆远程库到本地
+
+![image-20220609232553115](https://raw.githubusercontent.com/Jayfei-Wu/NotePic/master/pic/image-20220609232553115.png)
+
+
 
 # 第8章 Gitee 码云
 
